@@ -14,7 +14,7 @@
           </a>
         </li>
       </ul>
-    </header>
+    </header> 
 
     <main class="app-content">
       <div class="app-title">
@@ -106,9 +106,7 @@
                 </div>
                 <div class="form-group">
                   <button class="btn btn-primary" type="submit">Lưu lại</button>
-                  <a class="btn btn-secondary" href="/doc/table-data-table.html"
-                    >Hủy bỏ</a
-                  >
+                  <a class="btn btn-secondary" href="/doc/table-data-table.html">Hủy bỏ</a>
                 </div>
               </form>
             </div>
@@ -119,47 +117,9 @@
   </div>
 </template>
 
-<style scoped>
-.app-title {
-  margin-bottom: 20px;
-}
-
-.row .form-group {
-  margin-bottom: 15px;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-}
-</style>
-
 <script>
 import axios from "axios";
-import Cookies from "js-cookie"; // Dùng thư viện js-cookie (nếu cần quản lý cookies tiện lợi)
+import Cookies from "js-cookie";
 
 export default {
   data() {
@@ -171,7 +131,7 @@ export default {
         phone: "",
         note: "",
         status: true,
-        creation_date: new Date().toISOString().split("T")[0], // Set default to current date
+        creation_date: new Date().toISOString().split("T")[0],
       },
     };
   },
@@ -181,8 +141,7 @@ export default {
         console.log("Bắt đầu gửi form...");
         console.log("Dữ liệu khách hàng:", this.customer);
 
-        // Lấy token từ cookies (hoặc cách lưu trữ bạn đang dùng)
-        const token = Cookies.get("token"); // Token được lưu với key 'auth_token'
+        const token = Cookies.get("token");
 
         if (!token) {
           console.error("Token không tồn tại hoặc người dùng chưa đăng nhập.");
@@ -191,54 +150,41 @@ export default {
         }
         console.log("Token lấy từ cookies:", token);
         const api = "http://localhost:8080/admin/customer/save";
-        // Payload gửi tới API
         const payload = {
           name: this.customer.name,
           address: this.customer.address,
           phone: this.customer.phone,
           note: this.customer.note,
           status: this.customer.status,
-          edit_Date: null, // Customize nếu cần
+          edit_Date: null,
         };
         console.log("Payload gửi tới API:", payload);
 
-        // Gửi yêu cầu với token trong headers
         const response = await axios.post(api, payload, {
           headers: {
-            Authorization: `Bearer ${token}`, // Định dạng phổ biến cho token
+            Authorization: `Bearer ${token}`,
           },
-          withCredentials: true, // Đảm bảo gửi kèm cookies
+          withCredentials: true,
         });
 
         console.log("Phản hồi từ API:", response.data);
         alert("Tạo khách hàng thành công!");
-        this.$router.push("/customer"); // Điều hướng về trang customerList.vue
+        this.$router.push("/customer");
       } catch (error) {
         console.error("Lỗi khi gửi form:", error);
 
         if (error.response) {
           console.error("Chi tiết lỗi từ server:", error.response.data);
-          console.error("HTTP Status:", error.response.status);
-          console.error("Headers:", error.response.headers);
+          const errorMessage = error.response.data.message || `Lỗi ${error.response.status}: Không thể tạo khách hàng.`;
+          alert(errorMessage);
         } else if (error.request) {
           console.error("Không nhận được phản hồi từ server:", error.request);
+          alert("Không thể kết nối đến máy chủ. Vui lòng kiểm tra lại đường truyền mạng.");
         } else {
-          console.error(
-            "Lỗi xảy ra trong quá trình tạo yêu cầu:",
-            error.message
-          );
+          console.error("Lỗi xảy ra trong quá trình tạo yêu cầu:", error.message);
         }
-
-        alert("Có lỗi xảy ra, vui lòng thử lại!");
       }
     },
   },
 };
 </script>
-
-<style scoped>
-/* Add custom styles if necessary */
-.container {
-  padding: 20px;
-}
-</style>

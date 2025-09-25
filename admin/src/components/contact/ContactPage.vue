@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     deleteContact(id) {
-      const token = Cookies.get("authToken");
+      const token = Cookies.get("token"); // Thống nhất key lấy token
       if (confirm("Bạn có chắc chắn muốn xóa không?")) {
         axios
             .get(`http://localhost:8080/MiniatureCrafts/contact/delete/${id}`, {
@@ -92,7 +92,7 @@ export default {
       }
     },
     fetchContact() {
-      const token = Cookies.get("authToken");
+      const token = Cookies.get("token"); // Thống nhất key lấy token
       axios
           .get(`http://localhost:8080/MiniatureCrafts/contact/findall`, {
             headers: {

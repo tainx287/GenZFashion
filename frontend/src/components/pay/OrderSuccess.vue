@@ -1,8 +1,8 @@
 <script setup>
-import {ref} from "vue";
+import { ref } from "vue";
 
 const message = ref("Đặt hàng thành công!");
-const tips = ref("Cảm ơn bạn đã mua sắm tại MiniatureCrafts. Đơn hàng của bạn sẽ được xử lý và giao trong vòng 48h.");
+const tips = ref("Cảm ơn bạn đã mua sắm tại GenZFashion. Đơn hàng của bạn sẽ được xử lý và giao trong vòng 48h.");
 </script>
 
 <template>
@@ -11,8 +11,8 @@ const tips = ref("Cảm ơn bạn đã mua sắm tại MiniatureCrafts. Đơn h�
       <img src="../../assets/img/logo/img.png" alt="success" class="icon" />
       <h1>{{ message }}</h1>
       <p>{{ tips }}</p>
-      <a href="/history" class="btn">Xem đơn hàng</a>
-      <a href="/" class="btn-outline">Tiếp tục mua sắm</a>
+      <a href="/history" class="btn btn-main">Xem đơn hàng</a>
+      <a href="/" class="btn btn-outline-main">Tiếp tục mua sắm</a>
     </div>
   </div>
 </template>
@@ -22,8 +22,8 @@ const tips = ref("Cảm ơn bạn đã mua sắm tại MiniatureCrafts. Đơn h�
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  background: #ffffff;
+  min-height: 70vh;
+  background: #f8f9fa;
 }
 
 .success-card {
@@ -32,7 +32,7 @@ const tips = ref("Cảm ơn bạn đã mua sắm tại MiniatureCrafts. Đơn h�
   border-radius: 16px;
   text-align: center;
   max-width: 500px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .icon {
@@ -41,7 +41,7 @@ const tips = ref("Cảm ơn bạn đã mua sắm tại MiniatureCrafts. Đơn h�
 }
 
 h1 {
-  color: #28a745;
+  color: #FFC7ED;
   font-size: 28px;
   margin-bottom: 15px;
 }
@@ -52,35 +52,34 @@ p {
   margin-bottom: 25px;
 }
 
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 12px 24px;
-  background: #28a745;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+.btn-main {
+  background: #FFC7ED;
+  color: #111111;
+  border: none;
 }
 
-.btn:hover {
-  background: #218838;
+.btn-main:hover {
+  background: #ff7dd3;
 }
 
-.btn-outline {
-  display: inline-block;
-  margin: 5px;
-  padding: 12px 24px;
+.btn-outline-main {
   background: transparent;
-  color: #28a745;
-  border: 2px solid #28a745;
+  color: #111111;
+  border: 2px solid #FFC7ED;
+}
+
+.btn-outline-main:hover {
+  background: #ff7dd3;
+  color: #111111;
+}
+
+.btn, .btn-outline-main {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   transition: 0.3s;
-}
-
-.btn-outline:hover {
-  background: #28a745;
-  color: white;
+  font-weight: 500;
 }
 </style>

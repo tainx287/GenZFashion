@@ -240,8 +240,15 @@ export default {
     },
     processData(data) {
       return data.map((item) => {
-        item.productID.defaultImage =
-            item.images.cd_Images || "default.png";
+        const product = item.productID;
+        if (product) {
+            const imgs = product.images || [];
+            let imgObj = imgs.find(i => i.set_Default);
+            if (!imgObj && imgs.length) {
+              imgObj = [...imgs].sort((a, b) => a.id - b.id)[0];
+            }
+            product.defaultImage = (imgObj && imgObj.cd_Images) ? imgObj.cd_Images : 'default.png';
+        }
         item.sold = item.sold || 0;
         return item;
       });

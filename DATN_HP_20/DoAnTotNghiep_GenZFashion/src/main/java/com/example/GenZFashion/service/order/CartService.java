@@ -6,7 +6,6 @@ import com.example.GenZFashion.entity.Variation;
 import com.example.GenZFashion.repository.order.CartRepository;
 import com.example.GenZFashion.service.product.VariationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +23,7 @@ public class CartService {
     private OrderService orderService;
 
 
-    public List<CartItemDTO> findAll(Pageable pageable, Long customerId) {
+    public List<CartItemDTO> findAll(Long customerId) {
         List<CartItem> cartItems = cartRepository.findByCustomerId(customerId);
         return cartItems.stream().map(this::mapEntityToDTO).toList();
     }
@@ -41,6 +40,7 @@ public class CartService {
     public ResponseEntity<String> addToCart(CartItemDTO cartItemDTO) {
         Long customerId = cartItemDTO.getCustomer_id().getID();
         Long variationId = cartItemDTO.getVariation_id().getID();
+        int requestedQuantity = cartItemDTO.getQuantity();
 
         Variation variation = variationService.findByIDEntity(variationId);
         if (variation == null) {
@@ -48,39 +48,35 @@ public class CartService {
         }
 
         int availableQuantity = variation.getQuantity();
-        int requestedQuantity = cartItemDTO.getQuantity();
 
-        if (requestedQuantity > availableQuantity || availableQuantity == 0) {
-            return ResponseEntity.badRequest().body("Not enough quantity: " + variation.getProductID().getName());
+        if (availableQuantity == 0) {
+            return ResponseEntity.badRequest().body("Sản phẩm đã hết hàng.");
         }
 
-        //gan du lieu cho cart
-        CartItem entity = new CartItem();
-        entity.setCustomer_id(orderService.mapCustomerDTOToEntity(cartItemDTO.getCustomer_id()));
-        entity.setVariation_id(variation);
-        entity.setQuantity(requestedQuantity);
-        entity.setStatus(1);
-
-
         CartItem cartItem = cartRepository.findByCustomerAndVariation(customerId, variationId);
-        if (cartItem == null) {
-            // Create new cart item
 
-            cartRepository.save(entity);
+        if (cartItem == null) {
+            // Thêm mới sản phẩm vào giỏ hàng
+            if (requestedQuantity > availableQuantity) {
+                return ResponseEntity.badRequest().body("Số lượng yêu cầu vượt quá số lượng tồn kho.");
+            }
+            CartItem newCartItem = new CartItem();
+            newCartItem.setCustomer_id(orderService.mapCustomerDTOToEntity(cartItemDTO.getCustomer_id()));
+            newCartItem.setVariation_id(variation);
+            newCartItem.setQuantity(requestedQuantity);
+            newCartItem.setStatus(1);
+            cartRepository.save(newCartItem);
         } else {
-            // Update existing cart item
+            // Cập nhật sản phẩm đã có trong giỏ hàng
             int newQuantity = cartItem.getQuantity() + requestedQuantity;
             if (newQuantity > availableQuantity) {
-                if (cartItemDTO.getVariation_id() == null || cartItemDTO.getVariation_id().getID() == null) {
-                    throw new RuntimeException("Variation ID is null");
-                }
-                return ResponseEntity.badRequest().body("Not enough quantity: " + variation.getProductID().getName());
+                return ResponseEntity.badRequest().body("Không đủ số lượng sản phẩm trong kho.");
             }
             cartItem.setQuantity(newQuantity);
             cartRepository.save(cartItem);
         }
 
-        return ResponseEntity.ok("Add to cart successfully");
+        return ResponseEntity.ok("Thêm vào giỏ hàng thành công");
     }
 
     public ResponseEntity<String> updateQuantity(Long cartItemId, int newQuantity) {

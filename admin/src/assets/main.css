@@ -1,35 +1,32 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* Các style toàn cục sẽ được thêm vào đây nếu cần */
+.app-header {
+  background-color: #009688;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.app-sidebar__toggle:hover {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.app-nav__item:hover, .app-nav__item:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.app-menu__item.active, .app-menu__item:hover, .app-menu__item:focus {
+  background: #181f23;
+  color: #000000;
+  border-left-color: #009688;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.app-menu__item.haha {
+  background: #181f23;
+  color: black
+}
+
+/* Đặt màu chữ mặc định cho các mục menu */
+.app-menu__item .app-menu__label {
+  color: #000000; /* Thay #your_desired_color bằng mã màu bạn muốn, ví dụ: #000000 cho màu đen */
 }

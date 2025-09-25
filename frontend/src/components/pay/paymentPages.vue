@@ -211,7 +211,7 @@ export default {
 
 
             // Chuyển hướng ngay lập tức
-            // window.location.href = "/history";
+            window.location.href = "/history";
 
 
             const orderId = response.data.id; // Lấy ID đơn hàng từ API response

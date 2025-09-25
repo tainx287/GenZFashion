@@ -434,4 +434,5 @@ export default {
 
 <style scoped>
 @import "@/assets/main.css";
+
 </style>

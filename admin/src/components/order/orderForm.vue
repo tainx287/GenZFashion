@@ -4,9 +4,9 @@
     <header class="app-header">
       <ul class="app-nav">
         <li>
-          <a class="app-nav__item" href="/order">
+          <router-link class="app-nav__item" to="/order">
             <i class='bx bx-log-out bx-rotate-180'></i>
-          </a>
+          </router-link>
         </li>
       </ul>
     </header>
@@ -129,7 +129,7 @@
                 <tbody>
                 <tr v-for="item in cart" :key="item.id">
                   <td>{{ item.sku }}</td>
-                  <td>{{ item.productID.name }}</td>
+                  <td>{{ item.name }}</td>
                   <td class="quantity-cell">
                     <button class="quantity-btn" @click="decreaseQuantity(item)">-</button>
                     <input
@@ -402,7 +402,7 @@ export default {
 
       // Tạo dữ liệu đơn hàng theo cấu trúc JSON mẫu
       const orderData = {
-        customerID: {
+        customer: {
           id: this.selectedCustomer.id // ID khách hàng được chọn từ dropdown
         },
         code_Voucher: this.codevoucher, // Mã voucher (có thể thay đổi theo logic của bạn)
@@ -410,7 +410,7 @@ export default {
         paymentMethod: {
           id: this.paymentMethod // Phương thức thanh toán
         },
-        status: "", // Trạng thái đơn hàng (có thể thay đổi theo logic của bạn)
+        status: "PENDING", // Trạng thái đơn hàng (có thể thay đổi theo logic của bạn)
         type_Oder: "", // Loại đơn hàng (có thể thay đổi theo logic của bạn)
         orderLine: this.cart.map(item => ({
           variationID: {

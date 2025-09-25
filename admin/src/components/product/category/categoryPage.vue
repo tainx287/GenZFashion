@@ -251,7 +251,7 @@ export default {
   margin: 0 5px;
   padding: 8px 16px;
   border: none;
-  background-color: #007bff;
+  background-color: #FFC7ED;
   color: white;
   border-radius: 4px;
   cursor: pointer;

@@ -15,6 +15,7 @@ import setAccount from "@/components/employee/setAccount.vue";
 import NewPage from "@/components/news/NewsPage.vue";
 import IntroPage from "@/components/news/intro/IntroPage.vue";
 import ContactPage from "@/components/contact/ContactPage.vue";
+import AccountSetting from "@/components/dashboard/AccountSetting.vue"; // 1. Import component
 
 import Cookies from "js-cookie";
 
@@ -35,6 +36,7 @@ const routes = [
     { path: "/employee/account/:id", name: "EmployeeAccount", component: setAccount, meta: { requiresAuth: true } },
     { path: "/news", name: "NewsPage", component: NewPage , meta: { requiresAuth: true }},
     { path: "/intro", name: "IntroPage", component: IntroPage , meta: { requiresAuth: true }},
+    { path: "/account-setting", name: "AccountSetting", component: AccountSetting, meta: { requiresAuth: true } }, // 2. Thêm route mới
 ];
 
 const router = createRouter({
@@ -44,7 +46,7 @@ const router = createRouter({
 
 // Navigation Guard để kiểm tra trạng thái đăng nhập
 router.beforeEach((to, from, next) => {
-    const isAuthenticated = Cookies.get("authToken");
+    const isAuthenticated = Cookies.get("token");
     if (to.meta.requiresAuth && !isAuthenticated) {
         next("/login"); // Chuyển hướng đến trang đăng nhập nếu chưa đăng nhập
     } else {

@@ -93,7 +93,7 @@
                 </div>
                 <div class="product__item__text">
                   <h6>{{ v.name }}</h6>
-                  <a href="#" class="add-cart">+ Add To Cart</a>
+                  <a href="#" @click.prevent="addToCart(v)" class="add-cart">+ Add To Cart</a>
                   <h5>{{ formatCurrency(getMinPrice(v.variations)) }}</h5>
                 </div>
               </div>
@@ -116,9 +116,12 @@
 <script>
 import {ref, onMounted} from "vue";
 import axios from "axios";
+import {useUser} from "@/components/composables/useUser";
+import Cookies from "js-cookie";
 
 export default {
   setup() {
+    const {user, getUserInfo, getCart} = useUser();
     const currentPage = ref(1);
     const pageSize = ref(9);
     const totalPages = ref(0);
@@ -145,14 +148,12 @@ export default {
       return variations.reduce((min, v) => v.price < min ? v.price : min, variations[0].price);
     }
 
-    // Process fetched data and assign defaultImage on each variation
     function processData(data) {
       return data.map(item => {
-        // assign default image logic
         const imgs = item.images || []
         let imgObj = imgs.find(i => i.set_Default)
         if (!imgObj && imgs.length) imgObj = [...imgs].sort((a, b) => a.id - b.id)[0]
-        item.defaultImage = imgObj ? imgObj.cd_Images : 'default.png'
+        item.defaultImage = (imgObj && imgObj.cd_Images) ? imgObj.cd_Images : 'default.png'
         item.sold = item.sold || 0
         return item
       })
@@ -160,19 +161,16 @@ export default {
 
     const searchProducts = async (searchKeyword, page = 0) => {
       try {
-        // Nếu không nhập gì -> load tất cả sản phẩm
         if (!searchKeyword || searchKeyword.trim() === "") {
           await fetchProducts(page);
           return;
         }
-
         const response = await axios.get(
             `http://localhost:8080/MiniatureCrafts/result_product/${searchKeyword}`,
             {
-              params: { page, size: pageSize.value }
+              params: {page, size: pageSize.value}
             }
         );
-
         all_variations.value = processData(response.data.content || []);
         totalPages.value = response.data.page?.totalPages || 1;
         totalProducts.value = response.data.page?.totalElements || 0;
@@ -181,8 +179,6 @@ export default {
         console.error("Lỗi khi tìm kiếm sản phẩm:", error);
       }
     };
-
-
 
     function formatCurrency(value) {
       const number = Number(value);
@@ -278,12 +274,56 @@ export default {
       }
     }
 
-    onMounted(async () => {
-      await getCategories()
-      await getBrands()
-      await fetchProducts()
-    });
+    const addToCart = async (product) => {
+      if (!user.value || !user.value.userInfo) {
+        alert('Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng.');
+        return;
+      }
 
+      if (!product.variations || product.variations.length === 0) {
+        alert('Sản phẩm này không có sẵn biến thể để thêm vào giỏ hàng.');
+        return;
+      }
+
+      try {
+        const variationToAdd = product.variations[0];
+        const token = Cookies.get("authToken");
+
+        if (!token) {
+          alert('Phiên đăng nhập hết hạn. Vui lòng đăng nhập lại.');
+          return;
+        }
+
+        const cartItem = {
+          userId: user.value.userInfo.id,
+          variationId: variationToAdd.id,
+          quantity: 1,
+        };
+
+        await axios.post('http://localhost:8080/api/v1/cart/addtocart', cartItem, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+
+        await getCart();
+        alert(`Đã thêm sản phẩm "${product.name}" vào giỏ hàng!`);
+
+      } catch (error) {
+        console.error('Lỗi khi thêm vào giỏ hàng:', error);
+        alert('Đã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng.');
+      }
+    };
+
+    onMounted(() => {
+      // Fetch user info, but don't block other calls
+      getUserInfo();
+
+      // Fetch data that doesn't depend on the user being logged in
+      getCategories();
+      getBrands();
+      fetchProducts();
+    });
 
     return {
       openDetail,
@@ -310,6 +350,7 @@ export default {
       selectedBrandsID,
       changePage,
       filterByPrice,
+      addToCart,
     };
   },
 };

@@ -2,6 +2,8 @@
 import {ref, onMounted} from "vue";
 import axios from "axios";
 import Cookies from "js-cookie";
+import MainNavbar from "../MainNavbar.vue";
+import MainFooter from "../MainFooter.vue";
 const orderId = ref(null);
 const token = Cookies.get("token");
 const message = ref("Đơn hàng đã bị hủy");
@@ -28,24 +30,26 @@ onMounted(async () => {
 </script>
 
 <template>
+  <MainNavbar />
   <div class="cancel-container">
     <div class="cancel-card">
       <img src="../../assets/img/logo/img.png" alt="cancel" class="icon" />
       <h1>{{ message }}</h1>
       <p>{{ tips }}</p>
-      <a href="/cart" class="btn">Quay lại giỏ hàng</a>
-      <a href="/" class="btn-outline">Tiếp tục mua sắm</a>
+      <a href="/cart" class="btn btn-cancel">Quay lại giỏ hàng</a>
+      <a href="/" class="btn btn-outline-cancel">Tiếp tục mua sắm</a>
     </div>
   </div>
+  <MainFooter />
 </template>
 
-<style>
+<style scoped>
 .cancel-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  background: #ffffff;
+  min-height: 70vh;
+  background: #f8f9fa;
 }
 
 .cancel-card {
@@ -54,7 +58,7 @@ onMounted(async () => {
   border-radius: 16px;
   text-align: center;
   max-width: 500px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .icon {
@@ -74,35 +78,34 @@ p {
   margin-bottom: 25px;
 }
 
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 12px 24px;
+.btn-cancel {
   background: #dc3545;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #fff;
+  border: none;
 }
 
-.btn:hover {
+.btn-cancel:hover {
   background: #c82333;
 }
 
-.btn-outline {
-  display: inline-block;
-  margin: 5px;
-  padding: 12px 24px;
+.btn-outline-cancel {
   background: transparent;
   color: #dc3545;
   border: 2px solid #dc3545;
+}
+
+.btn-outline-cancel:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn, .btn-outline-cancel {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   transition: 0.3s;
-}
-
-.btn-outline:hover {
-  background: #dc3545;
-  color: white;
+  font-weight: 500;
 }
 </style>

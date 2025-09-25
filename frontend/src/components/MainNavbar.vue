@@ -1,7 +1,7 @@
 <template>
   <!-- Header Section Begin -->
   <header class="header" style="background-color: #ffffff">
-    <div class="header__top" v-if="!user">
+    <div class="header__top" >
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-7">
@@ -40,24 +40,22 @@
                 <router-link to="/variations">Biến thể</router-link>
               </li>
               <li>
-                <router-link to="/contact">Contacts</router-link>
+                <router-link to="/lien-he">Contacts</router-link>
               </li>
             </ul>
           </nav>
         </div>
         <div class="col-lg-3 col-md-3">
           <div class="header__nav__option" style="display: flex; align-items: center; gap: 20px;">
-            <router-link
-                v-if="!loading"
-                :to="user ? `/cart?userId=${user.userInfo.id}` : '/cart'"
-            >
-              <img src="../assets/img/icon/cart.png" alt="" class="header-icon"/>
+            <router-link v-if="!loading" :to="user ? `/cart?userId=${user.userInfo.id}` : '/cart'">
+              <img src="../assets/img/icon/cart.png" alt="" class="header-icon" />
               <span v-if="cart !== null && cart > 0" id="header__second__cart--notice"
-                    class="header__second__cart--notice">
-                  {{ cart }}
-                </span>
+                class="header__second__cart--notice">
+                {{ cart }}
+              </span>
             </router-link>
-            <router-link v-if="user" to="/history"><img src="../assets/img/icon/avt_user.png" alt="" class="header-icon">
+            <router-link v-if="user" to="/history"><img src="../assets/img/icon/avt_user.png" alt=""
+                class="header-icon">
             </router-link>
           </div>
         </div>
@@ -68,12 +66,12 @@
 </template>
 
 <script>
-import {ref, onMounted} from 'vue';
-import {useUser} from '@/components/composables/useUser';
+import { ref, onMounted } from 'vue';
+import { useUser } from '@/components/composables/useUser';
 
 export default {
   setup() {
-    const {user, cart, getUserInfo, logout} = useUser();
+    const { user, cart, getUserInfo, logout } = useUser();
     const loading = ref(true);
 
     onMounted(async () => {
@@ -82,7 +80,7 @@ export default {
       console.log(cart.value)
     });
 
-    return {user, cart, loading, logout};
+    return { user, cart, loading, logout };
   },
 };
 </script>

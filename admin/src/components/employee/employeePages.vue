@@ -216,12 +216,15 @@ export default {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
-  font-size: 14px;
 }
 
 .btn-primary:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
 }
 
 .btn-success {

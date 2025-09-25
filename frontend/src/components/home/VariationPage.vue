@@ -83,7 +83,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6" v-for="v in all_variations" :key="v.id">
               <div class="product__item">
                 <div class="product__item__pic set-bg"
-                     :style="{ backgroundImage: `url(http://localhost:8080/upload/images/${v.images.cd_Images})` }">
+                     :style="v.images && v.images.cd_Images ? { backgroundImage: `url(http://localhost:8080/upload/images/${v.images.cd_Images})` } : {}">
                   <ul class="product__hover">
                     <li><a href="#"><img src="../../assets/img/icon/heart.png" alt=""></a></li>
                     <li><a href="#"><img src="../../assets/img/icon/compare.png" alt=""> <span>Compare</span></a></li>

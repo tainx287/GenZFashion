@@ -1,4 +1,4 @@
-# fontend_hp29_vuejs
+# fontend_GenZFashion_vuejs
 
 ## Project setup
 ```

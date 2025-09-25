@@ -4,7 +4,6 @@ package com.example.GenZFashion.controller.users.home;
 import com.example.GenZFashion.dto.CartItemDTO;
 import com.example.GenZFashion.service.order.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +18,8 @@ public class CartController {
     CartService cartServices;
 
     @GetMapping("/findall/{customer_id}")
-    public List<CartItemDTO> findAll(Pageable pageable, @PathVariable("customer_id") Long customer_id) {
-        return cartServices.findAll(pageable, customer_id);
+    public List<CartItemDTO> findAll(@PathVariable("customer_id") Long customer_id) {
+        return cartServices.findAll(customer_id);
     }
 
     @GetMapping("count/{customer_id}")

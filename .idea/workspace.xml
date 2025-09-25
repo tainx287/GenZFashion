@@ -4,8 +4,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ee410bb-56c7-4383-ab83-9ae1036cc778" name="Changes" comment="">
+    <list default="true" id="6ee410bb-56c7-4383-ab83-9ae1036cc778" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATN_HP_20/DoAnTotNghiep_GenZFashion/src/main/java/com/example/GenZFashion/controller/users/home/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DATN_HP_20/DoAnTotNghiep_GenZFashion/src/main/java/com/example/GenZFashion/controller/users/home/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATN_HP_20/DoAnTotNghiep_GenZFashion/src/main/java/com/example/GenZFashion/service/order/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DATN_HP_20/DoAnTotNghiep_GenZFashion/src/main/java/com/example/GenZFashion/service/order/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/admin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/admin/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/assets/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/assets/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/assets/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/assets/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/assets/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/assets/styles/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/assets/styles/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/accountPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/accountPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/contact/ContactPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/contact/ContactPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/customer/customerAdd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/customer/customerAdd.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/customer/customerEdit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/customer/customerEdit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/customer/customerList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/customer/customerList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/dashboard/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/dashboard/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/employee/employeePages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/employee/employeePages.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/employee/setAccount.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/employee/setAccount.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/login/loginPages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/login/loginPages.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/navbar/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/navbar/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/news/NewsPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/news/NewsPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/news/intro/IntroPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/news/intro/IntroPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/order/orderForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/order/orderForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/order/orderPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/order/orderPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/product/VariationPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/product/VariationPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/product/brands/brandsPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/product/brands/brandsPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/product/category/categoryPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/product/category/categoryPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/product/new.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/components/product/productPages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/components/product/productPages.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/jsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/elegant-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/elegant-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/nice-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/nice-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/slicknav.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/slicknav.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/ElegantIcons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/fonts/ElegantIcons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/icon/casual-t-shirt-.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/icon/casual-t-shirt-.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/icon/sport-shoe.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/icon/sport-shoe.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/icon/uicons-regular-rounded/css/uicons-regular-rounded.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/icon/uicons-regular-rounded/css/uicons-regular-rounded.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/icon/uicons-regular-rounded/how-to-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/icon/uicons-regular-rounded/how-to-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/icon/uicons-regular-rounded/svg/fi-rr-credit-card.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/icon/uicons-regular-rounded/svg/fi-rr-credit-card.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/zoomsl.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/zoomsl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/zoomsl.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/zoomsl.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/main1.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/main1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/reponsive1.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/reponsive1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/MainFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MainFooter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/MainNavbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MainNavbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/cart/cartPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/cart/cartPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/composables/useUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/composables/useUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/conttact/ConttactPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/conttact/ConttactPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/home/HomeNew.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/home/HomeNew.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/home/ProductDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/home/ProductDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/home/ProductPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/home/ProductPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/home/VariationPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/home/VariationPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login/ForgotPassword.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login/ForgotPassword.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login/LoginPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login/RegisterInfoPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login/RegisterInfoPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login/RegisterPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login/RegisterPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pay/OrderCancel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pay/OrderCancel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pay/OrderSuccess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pay/OrderSuccess.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/pay/paymentPages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/pay/paymentPages.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/profile/accountManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/profile/accountManagement.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,30 +151,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build DoAnTotNghiep_GenZFashion.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.GenZFashion.executor": "Run",
-    "git-widget-placeholder": "#2 on feature/frontend-tai",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/RaTruong/GenZFashionBach/GenZFashion/frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build DoAnTotNghiep_GenZFashion.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Sweep Version Update&quot;: &quot;Sweep Version Update&quot;,
+    &quot;Notification.DoNotAsk-Sweep Version Update&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GenZFashion.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#2 on feature/frontend-tai&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/RaTruong/GenZFashionHuyen/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="GenZFashion" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -114,11 +209,26 @@
       <workItem from="1758684132660" duration="2760000" />
       <workItem from="1758687277973" duration="85000" />
       <workItem from="1758704822493" duration="830000" />
+      <workItem from="1758772978328" duration="1717000" />
+      <workItem from="1758777416590" duration="689000" />
+      <workItem from="1758785292371" duration="4055000" />
+      <workItem from="1758794218328" duration="3207000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
